@@ -199,7 +199,7 @@ def pick_image():
             la.pack(pady=10)
     else:
         # Set the background color of the window
-        bg = PhotoImage(file="Images/Welcome.png")
+        bg = PhotoImage(file="assets/Welcome.png")
         label = Label(root, image=bg)
         label.image = bg
         label.place(x=0, y=0, height=850, width=1080)
@@ -249,7 +249,7 @@ def main():
     root.geometry("1080x850")
 
     # Set the background color of the window
-    bg = PhotoImage(file="Images/Welcome.png")
+    bg = PhotoImage(file="assets/Welcome.png")
     label = Label(root, image=bg)
     label.image = bg
     label.place(x=0, y=0, height=850, width=1080)
