@@ -21,9 +21,9 @@ def average_filter(img, img_name):
                 # find the average of the pixels and
                 for dx in range(-1, 2):
                     for dy in range(-1, 2):
-                        xx = x + dx
-                        yy = y + dy
-                        tmp += img[xx, yy, color]
+                        new_x = x + dx
+                        new_y = y + dy
+                        tmp += img[new_x, new_y, color]
 
                 # replace the ceter pixel by the average
                 img_new[x, y, color] = tmp / 9
