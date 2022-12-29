@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 from tkinter import ttk
 from functools import partial
 from average_filter import average_filter
-from contrast_streching import contrast_stretching
+from contrast_stretching import contrast_stretching
 from histogram_equilization import histo_eq
 from median_filtering import median_filter
 import cv2
@@ -37,10 +37,9 @@ def get_image_name():
 def show_filter(func):
     global img_label
     img_label.destroy()
-    img = cv2.imread(path, 0)
-    img = func(img, img_name)
-    cv2.imwrite(f"EditedImages/last_filter_{img_name}", img)
-    img = Image.open(f"EditedImages/last_filter_{img_name}")
+    img = cv2.imread(path, cv2.IMREAD_COLOR)
+    img, output_path = func(img=img, img_name=img_name)
+    img = Image.open(output_path)
     image = img.resize((200, 200))
     my_img = ImageTk.PhotoImage(image)
     img_label = Label(
