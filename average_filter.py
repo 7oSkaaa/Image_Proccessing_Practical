@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 
-def average_filter(img, img_name):
+def average_filter(img, img_name, img_path):
     """Average filter"""
     """Average filter"""
 

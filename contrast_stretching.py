@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 
-def contrast_stretching(img, img_name):
+def contrast_stretching(img, img_name, img_path):
 
     # create a copy of the image
     stretched_image = img

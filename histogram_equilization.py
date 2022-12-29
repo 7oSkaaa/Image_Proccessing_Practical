@@ -1,7 +1,7 @@
 import cv2
 
 
-def histo_eq(img, img_name):
+def histo_eq(img, img_name, img_path):
     """Histogram equalization"""
     # convert from RGB color-space to YCrCb
     ycrcb_img = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
